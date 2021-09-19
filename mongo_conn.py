@@ -7,7 +7,7 @@ print(myclient.list_database_names())
 
 mycol = mydb["customers"]
 print(mydb.list_collection_names())
-
+'''
 mylist = [
   { "_id": 1, "name": "John", "address": "Highway 37"},
   { "_id": 2, "name": "Peter", "address": "Lowstreet 27"},
@@ -27,3 +27,6 @@ mylist = [
 
 x = mycol.insert_many(mylist)
 print(x.inserted_ids)
+'''
+for i in mycol.find():
+  print(i)
